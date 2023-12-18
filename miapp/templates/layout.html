@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.cdnfonts.com/css/gt-america-trial" rel="stylesheet" />
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
+    <title>EF</title>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <img src="https://pbs.twimg.com/media/BqcO49GIYAAxO7p.jpg:large" alt="" style="width: 60px;">
+
+        <a class="topbar-inner__helpcenter" href="#">Vegas-Ramon-Navarro</a>
+        <a class="topbar-inner__search" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            style="fill: rgb(255, 255, 255)"
+          >
+            <path
+              d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
+            ></path>
+          </svg>
+        </a>
+        <a class="topbar-inner__signin" href="/">Inicio</a>
+        <a class="topbar-inner__signin" href="/integrantes">Integrantes</a>
+        <a class="topbar-inner__signin" href="/docentes">Listar docentes</a>
+        <a class="topbar-inner__signin" href="/crear_docente">Crear docente</a>
+        <a class="topbar-inner__signin" href="/cursos">Listar cursos</a>
+        <a class="topbar-inner__signin" href="/crear_curso">Crear curso</a>
+      </div>
+    </header>
+    <main>{% block content %} {% endblock %}</main>
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer__column">
+          <h3>Integrante</h3>
+          <a href="#">Vegas</a>
+          <a href="#">Navarro</a>
+          <a href="#">Ramon</a>
+        </div>
+        <div class="footer__column">
+          <h3>Profesora</h3>
+          <a href="#">Flor Cerdan</a>
+        </div>
+
+        <div class="footer__column footer__column-copyright">
+          <p>© Copyright 2023</p>
+          <p>Cebollitas Inc.</p>
+          <p>All rights reserved</p>
+        </div>
+      </div>
+      
+    </footer>
+  </body>
+</html>
