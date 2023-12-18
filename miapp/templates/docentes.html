@@ -1,3 +1,31 @@
 {% extends 'layout.html' %} {% block content %}
 <h1>Listado de docentes</h1>
+<table class="table">
+    <tbody>
+        <thead>
+            <th>Id</th>
+            <th>Codigo</th>
+            <th>Nombre</th>
+            <th>Apellido paterno</th>
+            <th>Apellido materno</th>
+            <th>Dni</th>
+            <th>Fecha nacimiento</th>
+            <th>Fecha registro</th>
+        </thead>
+        {% for docente in docentes %}
+        
+        <tr>
+            <td>{{ docente.iddocente }}</td>
+            <td>{{ docente.codigo }}</td>
+            <td>{{ docente.nombre }}</td>
+            <td>{{ docente.apellido_paterno }}</td>
+            <td>{{ docente.apellido_materno }}</td>
+            <td>{{ docente.dni }}</td>
+            <td>{{ docente.fecha_nacimiento }}</td>
+            <td>{{ docente.fecha_registro }}</td>
+            <td><a href="{% url 'eliminar_docente' iddocente=docente.iddocente %}" class="btn btn-sm btn-block btn-danger">Eliminar</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
 {% endblock %}
